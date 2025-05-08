@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "title1",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe amet ad illum recusandae est corrupti ipsam ex vel inventore!"
+    },
+    {
+      "id": 2,
+      "title": "title2",
+      "description": "Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe amet ad illum recusandae est corrupti ipsam ex vel inventore!"
+    }
+  ]
+}
