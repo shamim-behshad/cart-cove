@@ -1,12 +1,12 @@
+import { ArticlesType } from "@/app/blogs/page";
 import React from "react";
 
-function Articles() {
+function Articles({title, description}: ArticlesType) {
   return (
     <div className="shadow p-4">
-      <h2>Title</h2>
+      <h2>{title}</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe
-        amet ad illum recusandae est corrupti ipsam ex vel inventore!
+        {description}
       </p>
     </div>
   );

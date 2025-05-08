@@ -18,7 +18,7 @@ async function Blogs() {
     <Container>
       <div className="grid grid-cols-4 gap-4 py-16">
         {data.map((item) => (
-          <Articles />
+          <Articles key={item.id} {...item}/>
         ))}
       </div>
     </Container>
