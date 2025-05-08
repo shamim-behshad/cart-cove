@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 export interface ArticlesType {
-  id: number;
+  id: string;
   title: string;
   description: string;
 }
