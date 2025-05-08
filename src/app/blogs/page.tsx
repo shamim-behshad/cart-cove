@@ -1,5 +1,6 @@
 import Articles from "@/components/Articles";
 import Container from "@/components/Container";
+import Link from "next/link";
 import React from "react";
 
 export interface ArticlesType {
@@ -18,7 +19,9 @@ async function Blogs() {
     <Container>
       <div className="grid grid-cols-4 gap-4 py-16">
         {data.map((item) => (
-          <Articles key={item.id} {...item}/>
+          <Link key={item.id} href={`./blogs/${item.id}`}>
+            <Articles  {...item}/>
+          </Link>
         ))}
       </div>
     </Container>
