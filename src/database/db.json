@@ -1,39 +1,32 @@
 {
-  "articles": [
+  "products": [
     {
       "id": "1",
-      "title": "title1",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe amet ad illum recusandae est corrupti ipsam ex vel inventore!"
+      "image": "https://assets.turbologo.com/blog/en/2021/09/10093610/photo-camera-958x575.png",
+      "title": "product1",
+      "description": "slkfjsld jsldkfjlksdjflk sldkfjklsdf",
+      "price": 15
     },
     {
       "id": "2",
-      "title": "title2",
-      "description": "Lorem2 ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe amet ad illum recusandae est corrupti ipsam ex vel inventore!"
+      "image": "https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/primary/ProductShowcasesampleimages/JPEG/Product+Showcase-1.jpg",
+      "title": "product2",
+      "description": "slkfjsld jsldkfjlksdjflk sldkfjklsdf",
+      "price": 234
     },
     {
       "id": "3",
-      "title": "title3",
-      "description": "Lorem3 ipsum dolor sit amet consectetur adipisicing elit. Dolorum quae accusamus odit necessitatibus hic fugit rerum in unde."
+      "image": "https://magicstudio.com/blog/content/images/2023/10/props-product-photography.webp",
+      "title": "product3",
+      "description": "slkfjsld jsldkfjlksdjflk sldkfjklsdf",
+      "price": 123
     },
     {
       "id": "4",
-      "title": "title4",
-      "description": "Lorem4 ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima harum soluta ducimus amet reiciendis, ex deserunt!"
-    },
-    {
-      "id": "5",
-      "title": "title5",
-      "description": "Lorem5 ipsum dolor sit amet consectetur adipisicing elit. Distinctio suscipit quo sed aperiam neque molestiae voluptatum magni!"
-    },
-    {
-      "id": "6",
-      "title": "title6",
-      "description": "Lorem6 ipsum dolor sit amet consectetur adipisicing elit. Animi cum doloribus eligendi eaque, beatae sapiente eveniet molestias?"
-    },
-    {
-      "id": "7",
-      "title": "title7",
-      "description": "Lorem7 ipsum dolor sit amet consectetur adipisicing elit. Asperiores sequi ullam tempora quasi explicabo amet numquam."
+      "image": "https://media.unstack.com/media/www/image/edit_product_pictures_cover.png",
+      "title": "product4",
+      "description": "slkfjsld jsldkfjlksdjflk sldkfjklsdf",
+      "price": 14
     }
   ]
 }
