@@ -1,16 +1,24 @@
 import React from "react";
 
-function ProductItem() {
+interface ProductItemProps {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  price: number;
+}
+
+function ProductItem({image,title,price}: ProductItemProps) {
   return (
     <div className="shadow-md">
       <img
-        src="https://assets.turbologo.com/blog/en/2021/09/10093610/photo-camera-958x575.png"
+        src={image}
         alt="picture of a camera"
       />
       <div className="p-2">
-        <h3>Product 1</h3>
+        <h3>{title}</h3>
         <p>
-          price: <span>38$</span>
+          price: <span>{price}$</span>
         </p>
       </div>
     </div>
