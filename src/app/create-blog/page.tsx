@@ -1,9 +1,10 @@
 import Container from "@/components/Container";
+import CreateArticle from "@/components/CreateArticle";
 
 function CreateBlog() {
   return (
     <Container>
-     <p>create blog</p>
+     <CreateArticle />
     </Container>
   );
 }
