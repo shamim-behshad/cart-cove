@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-function Container({children}: {children: React.ReactNode}) {
+interface iContainerProps{
+  children: React.ReactNode
+}
+
+function Container({children}: iContainerProps) {
   return (
     <div className='container mx-auto'>{children}</div>
   )

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Container from '@/components/Container';
 
 function Store() {
   return (
-    <div>Store</div>
+    <Container>Store</Container>
   )
 }
 
