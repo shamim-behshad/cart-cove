@@ -1,14 +1,13 @@
-import { Component } from "react"
-
+import Container from "@/components/Container"
 
 function CreateBlog() {
   return (
-    <Component>
+    <Container>
         <label>Title</label>
         <input type="text" />
         <label>Description</label>
         <textarea> </textarea>
-    </Component>
+    </Container>
   )
 }
 
