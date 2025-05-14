@@ -3,12 +3,12 @@ import { ProductItemProps } from "@/components/ProductItem";
 import React from "react";
 
 interface ProductProps {
-  params: Promise<{id: string}>;
+  params: Promise<{ id: string }>;
   searchParams: Promise<{}>;
 }
 
-async function Product({params}:ProductProps) {
-  const {id} = await params;
+async function Product({ params }: ProductProps) {
+  const { id } = await params;
   const results = await fetch(`http://localhost:3001/products/${id}`);
   const data = (await results.json()) as ProductItemProps;
 
@@ -32,10 +32,7 @@ async function Product({params}:ProductProps) {
           </div>
         </div>
         <div className="col-span-3">
-          <img
-            src={data.image }
-            alt=""
-          />
+          <img src={data.image} alt="" />
         </div>
       </div>
     </Container>
