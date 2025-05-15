@@ -4,7 +4,7 @@ import React from "react";
 
 
 function AddToCart() {
- const {} = useShopingCartContext()
+ const { cartItems } = useShopingCartContext()
 
   return (
     <div className="mt-4">
