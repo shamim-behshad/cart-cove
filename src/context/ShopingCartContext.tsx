@@ -12,6 +12,7 @@ type CartItems = {
 
 type TShopingCartContext = {
     cartItems: CartItems[];
+    handleIncreaseProductQty: (id: number) => void
 }
 
 const ShopingCartContext = createContext({} as TShopingCartContext);
@@ -25,8 +26,33 @@ export function ShopingCartContextProvider({
 }: ShopingCartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItems[]>([]);
 
+  const handleIncreaseProductQty = (id: number) => {
+    setCartItems(
+      (currentItem) => {
+        let isProductExist = currentItem.find((item) => item.id == id) == null;
+        
+        if (isProductExist) {
+          return [...currentItem, {id:id, qty: 1}]
+        } else{
+          return  currentItem.map(
+            (item) =>{
+              if(item.id == id){
+                return{
+                  ...item,
+                  qty: item.qty +1
+                }
+              } else {
+                return item;
+              }
+            }
+          )
+        }
+      }
+    )
+  }
+
   return (
-    <ShopingCartContext.Provider value={{cartItems}}>
+    <ShopingCartContext.Provider value={{cartItems, handleIncreaseProductQty}}>
       {children}
     </ShopingCartContext.Provider>
   );

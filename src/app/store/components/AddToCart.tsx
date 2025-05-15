@@ -2,13 +2,20 @@
 import { useShopingCartContext } from "@/context/ShopingCartContext";
 import React from "react";
 
+interface AddToCartProps {
+  id: string;
+}
 
-function AddToCart() {
- const { cartItems } = useShopingCartContext()
+
+
+function AddToCart({id}: AddToCartProps) {
+ const { cartItems,handleIncreaseProductQty } = useShopingCartContext();
+
+ console.log(cartItems)
 
   return (
     <div className="mt-4">
-      <button className="bg-sky-500 px-3 py-2 rounded-xl cursor-pointer">
+      <button onClick={()=> handleIncreaseProductQty(parseInt(id))} className="bg-sky-500 px-3 py-2 rounded-xl cursor-pointer">
         +
       </button>
       <span className="mx-4">2</span>

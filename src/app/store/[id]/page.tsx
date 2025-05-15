@@ -22,7 +22,7 @@ async function Product({ params }: ProductProps) {
           <p className="font-bold">
             price: <span>{data.price}$</span>
           </p>
-          <AddToCart />
+          <AddToCart id={id} />
         </div>
         <div className="col-span-3">
           <img src={data.image} alt="" />
