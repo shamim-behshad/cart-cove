@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useContext } from "react";
 import Container from "./Container";
+import { useShopingCartContext } from "@/context/ShopingCartContext";
 
 function Navbar() {
   const pathname = usePathname();
+  const {cartTotalQty} = useShopingCartContext()
 
   const navLinks = [
     {
@@ -37,6 +39,7 @@ function Navbar() {
           </div>
           <div>
             <Link href={"./cart"}>Cart</Link>
+            <span className="bg-red-600 px-1 py-1 rounded-full ml-1">{cartTotalQty}</span>
           </div>
         </div>
       </Container>
