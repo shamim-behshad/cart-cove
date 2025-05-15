@@ -9,7 +9,7 @@ interface AddToCartProps {
 
 
 function AddToCart({id}: AddToCartProps) {
- const { cartItems,handleIncreaseProductQty } = useShopingCartContext();
+ const { cartItems,handleIncreaseProductQty,getProductQty} = useShopingCartContext();
 
  console.log(cartItems)
 
@@ -18,7 +18,7 @@ function AddToCart({id}: AddToCartProps) {
       <button onClick={()=> handleIncreaseProductQty(parseInt(id))} className="bg-sky-500 px-3 py-2 rounded-xl cursor-pointer">
         +
       </button>
-      <span className="mx-4">2</span>
+      <span className="mx-4">{getProductQty(parseInt(id))}</span>
       <button className="bg-sky-500 px-3 py-2 rounded-xl cursor-pointer">
         -
       </button>

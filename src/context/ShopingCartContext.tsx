@@ -13,6 +13,7 @@ type CartItems = {
 type TShopingCartContext = {
   cartItems: CartItems[];
   handleIncreaseProductQty: (id: number) => void;
+  getProductQty: (id:number) => number;
 };
 
 const ShopingCartContext = createContext({} as TShopingCartContext);
@@ -25,6 +26,10 @@ export function ShopingCartContextProvider({
   children,
 }: ShopingCartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItems[]>([]);
+
+  const getProductQty = (id: number) => {
+    return cartItems.find((item) => item.id == id)?.qty || 0
+  } 
 
   const handleIncreaseProductQty = (id: number) => {
     setCartItems((currentItem) => {
@@ -49,7 +54,7 @@ export function ShopingCartContextProvider({
 
   return (
     <ShopingCartContext.Provider
-      value={{ cartItems, handleIncreaseProductQty }}
+      value={{ cartItems, handleIncreaseProductQty, getProductQty }}
     >
       {children}
     </ShopingCartContext.Provider>
