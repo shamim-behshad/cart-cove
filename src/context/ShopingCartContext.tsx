@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 type ShopingCartContextProviderProps = {
   children: React.ReactNode;
@@ -11,6 +11,10 @@ type CartItems = {
 };
 
 const ShopingCartContext = createContext({});
+
+export const useShopingCartContext = () => {
+    return useContext(ShopingCartContext);
+}
 
 export function ShopingCartContextProvider({
   children,

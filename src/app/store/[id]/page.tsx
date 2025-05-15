@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import { ProductItemProps } from "@/components/ProductItem";
 import React from "react";
+import AddToCart from "../components/AddToCart";
 
 interface ProductProps {
   params: Promise<{ id: string }>;
@@ -21,15 +22,7 @@ async function Product({ params }: ProductProps) {
           <p className="font-bold">
             price: <span>{data.price}$</span>
           </p>
-          <div className="mt-4">
-            <button className="bg-sky-500 px-3 py-2 rounded-xl cursor-pointer">
-              +
-            </button>
-            <span className="mx-4">2</span>
-            <button className="bg-sky-500 px-3 py-2 rounded-xl cursor-pointer">
-              -
-            </button>
-          </div>
+          <AddToCart />
         </div>
         <div className="col-span-3">
           <img src={data.image} alt="" />
