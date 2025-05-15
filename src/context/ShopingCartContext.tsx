@@ -6,16 +6,16 @@ type ShopingCartContextProviderProps = {
 };
 
 type CartItems = {
-    id: number;
-    qty: number;
-}
+  id: number;
+  qty: number;
+};
 
 const ShopingCartContext = createContext({});
 
 export function ShopingCartContextProvider({
   children,
 }: ShopingCartContextProviderProps) {
-    const [cartItems, setCartItems] = useState<CartItems[]>([])
+  const [cartItems, setCartItems] = useState<CartItems[]>([]);
 
   return (
     <ShopingCartContext.Provider value={{}}>
